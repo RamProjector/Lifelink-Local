@@ -162,3 +162,7 @@ The Android API URL was made configurable at build time. A student can now build
 ## Audit9 — Release and security defaults
 
 A release audit compared the Android and FastAPI route inventories and verified that the client contract has matching backend paths. The PostgreSQL adapter was changed to fail closed when authentication configuration is missing, while the local in-memory demo remains easy to run anonymously. Android debug and release builds were verified with a configurable HTTPS endpoint.
+
+## Audit10 — Repository hygiene and CI security
+
+The GitHub repository was reviewed like a shared software project rather than only a source archive. Historical build logs were removed because they add noise and can accidentally reveal environment details. The CI workflow was restricted to read-only repository contents and configured to cancel duplicate runs, reducing unnecessary work and limiting workflow permissions.

@@ -65,3 +65,7 @@ Made the Android API base URL configurable with `-PlifelinkApiBaseUrl=...` or `L
 ## Audit9 — Release and security defaults — 2026-09-16
 
 Compared Android and FastAPI route inventories, confirmed package hygiene, and verified Android debug/release builds with configurable API endpoints. The PostgreSQL adapter now defaults to authentication required when its environment setting is omitted; local demo behavior remains unchanged. Backend verification remains at 15 passing tests.
+
+## Audit10 — GitHub repository hygiene and CI hardening — 2026-09-17
+
+Removed obsolete build-round logs from the repository tree and added least-privilege `contents: read` permissions plus concurrency cancellation to the GitHub Actions workflow. Credential-name and generated-state scans remained clean.
